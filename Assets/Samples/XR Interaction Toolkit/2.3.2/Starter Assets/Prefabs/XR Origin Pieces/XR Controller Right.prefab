@@ -382,7 +382,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4283425761326543017}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0.97629607, z: 0.21643952, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -395,7 +395,7 @@ Transform:
   - {fileID: 4721242480693966281}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: -25, y: 180, z: 0}
 --- !u!114 &5756542168411550959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,6 +851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3475118261464492563}
     m_Modifications:
+    - target: {fileID: 8956762183001541754, guid: ea4d7c69a5ce00d4495036cac2db8cf5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 370e93876c8724bc1877b021fef179da, type: 2}
     - target: {fileID: 8956762183004495210, guid: ea4d7c69a5ce00d4495036cac2db8cf5, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -865,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8956762183004495210, guid: ea4d7c69a5ce00d4495036cac2db8cf5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0054
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8956762183004495210, guid: ea4d7c69a5ce00d4495036cac2db8cf5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -898,6 +902,10 @@ PrefabInstance:
     - target: {fileID: 8956762183004651786, guid: ea4d7c69a5ce00d4495036cac2db8cf5, type: 3}
       propertyPath: m_Name
       value: Werewolf_Mesh_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956762183004651802, guid: ea4d7c69a5ce00d4495036cac2db8cf5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea4d7c69a5ce00d4495036cac2db8cf5, type: 3}

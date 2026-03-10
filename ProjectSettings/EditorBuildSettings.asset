@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Climbing.unity
     guid: fdfc13902a9882e4dab3f574eec69348
+  - enabled: 1
+    path: Assets/Scenes/Wizard.unity
+    guid: 9b0aedaf3a87a944ca9cd2e9076022b6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 36b46e260daddc8409267c5ba3a4b752, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6446a7bbc9c2aa74bbe9254c05ece37b, type: 2}

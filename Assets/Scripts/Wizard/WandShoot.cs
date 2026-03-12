@@ -10,10 +10,13 @@ public class WandShoot : MonoBehaviour
 
     float nextFireTime = 0f;
 
-    InputDevice hand;
+    InputDevice handRight;
+    InputDevice handLeft;
     bool lastState = false;
 
     bool isGrabbed = false;
+
+    bool isRight = false;
 
     bool isStarted = false;
     public UnityEvent onStart;
@@ -21,6 +24,11 @@ public class WandShoot : MonoBehaviour
     void Start()
     {
         InitializeDevice();
+    }
+
+    public void SetRightHand(bool isRightHand)
+    {
+        isRight = isRightHand;
     }
 
     public void SetGrabbed(bool grabbed)
@@ -38,12 +46,13 @@ public class WandShoot : MonoBehaviour
 
     void InitializeDevice()
     {
-        hand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        handRight = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        handLeft = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     }
 
     void Update()
     {
-        if (!hand.isValid)
+        if (!handRight.isValid)
         {
             InitializeDevice();
             return;
@@ -51,7 +60,17 @@ public class WandShoot : MonoBehaviour
 
         bool pressed;
 
-        if (hand.TryGetFeatureValue(CommonUsages.primaryButton, out pressed))
+        if (handRight.TryGetFeatureValue(CommonUsages.triggerButton, out pressed) && isRight)
+        {
+            if (pressed && !lastState && isGrabbed)
+            {
+                TryShoot();
+            }
+
+            lastState = pressed;
+        }
+
+        if (handLeft.TryGetFeatureValue(CommonUsages.triggerButton, out pressed) && !isRight)
         {
             if (pressed && !lastState && isGrabbed)
             {

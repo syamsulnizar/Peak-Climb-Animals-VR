@@ -7,6 +7,7 @@ public class HealthWatch : MonoBehaviour
 
     private void Start()
     {
+        healthTextWatch.text = PlayerHealth.Instance.currentHealth.ToString();
         PlayerHealth.Instance.OnHealthUpdate += UpdateHealth;
     }
 
